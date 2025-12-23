@@ -115,41 +115,41 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: SmallLightFixturePowered
-  entities:
-  - uid: 62
-    components:
-    - type: Transform
-      pos: -6.5,2.5
-      parent: 1
-  - uid: 63
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -6.5,-3.5
-      parent: 1
-  - uid: 64
-    components:
-    - type: Transform
-      pos: -0.5,5.5
-      parent: 1
-  - uid: 65
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,-6.5
-      parent: 1
-  - uid: 66
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,-3.5
-      parent: 1
-  - uid: 67
-    components:
-    - type: Transform
-      pos: 6.5,2.5
-      parent: 1
+# - proto: SmallLightFixturePowered
+#   entities:
+#   - uid: 62
+#     components:
+#     - type: Transform
+#       pos: -6.5,2.5
+#       parent: 1
+#   - uid: 63
+#     components:
+#     - type: Transform
+#       rot: 3.141592653589793 rad
+#       pos: -6.5,-3.5
+#       parent: 1
+#   - uid: 64
+#     components:
+#     - type: Transform
+#       pos: -0.5,5.5
+#       parent: 1
+#   - uid: 65
+#     components:
+#     - type: Transform
+#       rot: 3.141592653589793 rad
+#       pos: -0.5,-6.5
+#       parent: 1
+#   - uid: 66
+#     components:
+#     - type: Transform
+#       rot: 3.141592653589793 rad
+#       pos: 6.5,-3.5
+#       parent: 1
+#   - uid: 67
+#     components:
+#     - type: Transform
+#       pos: 6.5,2.5
+#       parent: 1
 - proto: SpawnPointLatejoin
   entities:
   - uid: 69
