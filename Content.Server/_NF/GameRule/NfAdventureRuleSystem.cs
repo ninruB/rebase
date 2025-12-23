@@ -65,6 +65,7 @@ public sealed class NfAdventureRuleSystem : GameRuleSystem<AdventureRuleComponen
 
         _sawmill = IoCManager.Resolve<ILogManager>().GetSawmill("nfadventurerulesystem");
 
+        _sawmill.Debug("initializing nf adventure rule system");
         // SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawningEvent);
     }
 
@@ -124,6 +125,7 @@ public sealed class NfAdventureRuleSystem : GameRuleSystem<AdventureRuleComponen
     /// <param name="hideIFF">a boolean to set wether this is visible on the map screen or not</param>
     private void SpawnMapElementByID(MapId mapid, string gameMapID, float posX, float posY, float randomOffsetX, float randomOffsetY, Color color, string? iffFaction, bool hideIFF)
     {
+        _sawmill.Debug("spawnmapelementbyid ran");
         if (_prototypeManager.TryIndex<GameMapPrototype>(gameMapID, out var stationProto))
         {
             if (_map.TryLoadGrid(mapid, new ResPath(stationProto.MapPath.ToString()), out var stationGridUid, null, new Vector2(posX, posY) + _random.NextVector2(randomOffsetX, randomOffsetY)))
@@ -150,11 +152,13 @@ public sealed class NfAdventureRuleSystem : GameRuleSystem<AdventureRuleComponen
 
     protected override void Started(EntityUid uid, AdventureRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
+        _sawmill.Debug("started ran");
         var mapId = GameTicker.DefaultMap;
         base.Started(uid, component, gameRule, args);
 
         foreach (var gamemap in component.GameMapsID)
         {
+            _sawmill.Debug("Spawning gamemap ID: " + gamemap.Value.GameMapID);
             SpawnMapElementByID(mapId,
                                 gamemap.Value.GameMapID,
                                 gamemap.Value.PositionX,

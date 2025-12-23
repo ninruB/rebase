@@ -131,7 +131,8 @@ namespace Content.Client.LateJoin
                     }
                 });
 
-                if (_configManager.GetCVar(CCVars.CrewManifestWithoutEntity))
+                //carmine edit: if the station has NO JOBS then dont display crew manifest button
+                if (_configManager.GetCVar(CCVars.CrewManifestWithoutEntity) && _gameTicker.JobsAvailable[id].Count > 0)
                 {
                     var crewManifestButton = new Button()
                     {

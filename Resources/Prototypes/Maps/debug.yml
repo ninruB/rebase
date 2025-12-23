@@ -1,6 +1,7 @@
+---
 - type: gameMap
   id: Empty
-  mapName: Empty
+  mapName: Sepna Starsystem
   mapPath: /Maps/Test/empty.yml
   minPlayers: 0
   stations:
@@ -8,10 +9,10 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: "Empty"
-        - type: StationJobs
-          availableJobs:
-            Passenger: [ -1, -1 ]
+          mapNameTemplate: "Sepna Starsystem"
+        # - type: StationJobs
+        #   availableJobs:
+        #     Passenger: [ 0, 0 ]
 
 - type: gameMap
   id: Dev
@@ -25,8 +26,20 @@
         - type: StationNameSetup
           mapNameTemplate: "Dev"
         - type: StationJobs
+          overflowJobs:
+          - Captain
           availableJobs:
             Captain: [ -1, -1 ]
+#            LevymanDSM: [ -1, -1 ]
+#            InfanteerNCSP: [ -1, -1 ]
+#            PartisanNCWL: [ -1, -1 ]
+#            CorpsecSHI: [ -1, -1 ]
+        # Goobstation blob-config-start DEBUG
+        # - type: StationBlobConfig
+        #   stageBegin: 20
+        #   stageCritical: 50
+        #   stageTheEnd: 100
+        # Goobstation blob-config-end
 
 - type: gameMap
   id: TestTeg
@@ -40,5 +53,7 @@
         - type: StationNameSetup
           mapNameTemplate: "TEG"
         - type: StationJobs
+          overflowJobs:
+            - ChiefEngineer
           availableJobs:
             ChiefEngineer: [ -1, -1 ]

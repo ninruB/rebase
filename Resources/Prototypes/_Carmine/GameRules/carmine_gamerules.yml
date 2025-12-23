@@ -1,0 +1,42 @@
+---
+# GAME PRESETS ARE WHAT YOU VOTE ON AS A GAMEMODE.
+# They do NOT CONTROL what spawns in by themselves. this is handled by the rule that it's pointing to in the rules: dictionary
+# in carminegamerules.yml you can find "Adventure" "VladzenaJackal", etc.
+
+- type: gamePreset
+  id: CarmineBaseGamemode
+  alias:
+  - Freeplay
+  name: Freeplay
+  showInVote: true
+  description: The last days of Taypan. Lasts 2-4 hours.
+  rules:
+  - CarmineBaseGamemode
+
+
+# GAMERULES ARE WAHT DECIDES WHAT SPAWNS IN, BY EVERYTHING IN THE ADVENTURERULE COMPONENT
+#
+# gameMapsByID is a DICTIONARY that describes all spawned grids defined by a gameMap.
+# this is stuff like Port Vladzena, which has vladzena.yml (MAP) and vladzena.yml (PROTOTYPE)
+# you can give the dictionary key whatever name you want
+# gameMapID must equal the ID of the gameMap prototype's YML.
+# posX & posY define the position it will be spawned at
+# randomOffsetX & randomOffsetY describe an offset that will be applied to the position. leave undefined or at 0 to spawn as is. This offset is ALWAYS POSITIVE.
+# IFFColor changes what color the IFF in the shuttle and map screen will have. Use colors from the Color type, like White, Aqua, Blue, etc.
+# IFFFaction sets the faction of the object. to be honest i dont know if this does anything.
+# hideIFF is a boolean that controls if the object is visible from the map screen or not. by default it is set to false. use this for derelicts or secrets
+
+
+- type: entity
+  parent: BaseGameRule
+  id: CarmineBaseGamemode
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AdventureRule
+    gameMapsByID:
+      TestMapCarmine:
+        gameMapID: TestMapCarmine
+        posX: 0
+        posY: 0
+        IFFColor: Orange
+        IFFFaction: NCWL
