@@ -30,22 +30,22 @@
 
 - type: entity
   parent: IDCardStandard
-  id: PassengerIDCard
-  name: passenger ID card
+  id: AssistantIDCard
+  name: assistant ID card
   components:
   - type: Sprite
     layers:
     - state: default
     - sprite: &icon-rsi Interface/Misc/job_icons.rsi
       offset: &icon-offset -0.09375, 0.0625 #3 pixels left, 2 pixels up
-      state: Passenger
+      state: Assistant
   - type: PresetIdCard
-    job: Passenger
+    job: Assistant
 
 #Command
 
 - type: entity
-  parent: [IDCardStandard, BaseGrandTheftContraband]
+  parent: [IDCardStandard]
   id: CaptainIDCard
   name: captain ID card
   components:
@@ -919,7 +919,7 @@
 #Antags
 
 - type: entity
-  parent: [PassengerIDCard, BaseChameleon]
+  parent: [AssistantIDCard, BaseChameleon]
   id: AgentIDCard
   suffix: Agent
   components:
@@ -937,7 +937,7 @@
     - DoorBumpOpener
   - type: ChameleonClothing
     slot: [idcard]
-    default: PassengerIDCard
+    default: AssistantIDCard
     requireTag: WhitelistChameleonIdCard
   - type: UserInterface
     interfaces:
@@ -958,7 +958,7 @@
     - NuclearOperative
 
 - type: entity
-  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  parent: [ IDCardStandard ]
   id: SyndicateIDCard
   name: syndicate ID card
   components:
@@ -980,7 +980,7 @@
     - SyndicateAgent
 
 - type: entity
-  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  parent: [ SyndicateIDCard ]
   id: SyndiOperativeIDCard
   name: syndicate operative ID card
   components:
@@ -997,7 +997,7 @@
   - type: AgentIDCard
 
 - type: entity
-  parent: [ SyndiOperativeIDCard, BaseSyndicateContraband ]
+  parent: [ SyndiOperativeIDCard ]
   id: SyndiCorpsmanIDCard
   name: syndicate corpsman ID card
   components:
@@ -1013,7 +1013,7 @@
       state: SyndicateCorpsman
 
 - type: entity
-  parent: [ SyndiOperativeIDCard, BaseSyndicateContraband ]
+  parent: [ SyndiOperativeIDCard ]
   id: SyndiCommanderIDCard
   name: syndicate commander ID card
   components:
@@ -1029,7 +1029,7 @@
       state: SyndicateCommander
 
 - type: entity
-  parent: [ IDCardStandard, BaseMajorContraband ]
+  parent: [ IDCardStandard ]
   id: PirateIDCard
   name: pirate ID card
   components:

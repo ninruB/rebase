@@ -159,7 +159,7 @@
     castShadows: false
 
 - type: entity
-  parent: [ BaseAnomalyCore, BaseShadow ]
+  parent: [ BaseAnomalyCore ]
   id: AnomalyCoreShadow
   suffix: Shadow
   components:
@@ -335,7 +335,7 @@
     castShadows: false
 
 - type: entity
-  parent: [ BaseAnomalyInertCore, BaseShadow ]
+  parent: [ BaseAnomalyInertCore ]
   id: AnomalyCoreShadowInert
   suffix: Shadow, Inert
   components:

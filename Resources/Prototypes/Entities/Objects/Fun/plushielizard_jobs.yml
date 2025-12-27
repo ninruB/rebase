@@ -240,12 +240,12 @@
 
 - type: entity
   parent: BasePlushieLizardJob
-  id: PlushieLizardJobPassenger
-  name: passenger lizard plushie
-  description: An adorable stuffed toy that resembles a lizardperson as a passenger. Its eyes look at you, a little bit more beady than the rest.
+  id: PlushieLizardJobAssistant
+  name: assistant lizard plushie
+  description: An adorable stuffed toy that resembles a lizardperson as a assistant. Its eyes look at you, a little bit more beady than the rest.
   components:
   - type: Sprite
-    state: passenger
+    state: assistant
 
 - type: entity
   parent: BasePlushieLizardJob

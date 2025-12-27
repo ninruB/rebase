@@ -1225,7 +1225,7 @@
 
 #syndicate modules
 - type: entity
-  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
   id: BorgModuleSyndicateWeapon
   name: weapon cyborg module
   components:
@@ -1261,7 +1261,7 @@
     price: 2500
 
 - type: entity
-  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule ]
   id: BorgModuleOperative
   name: operative cyborg module
   description: A module that comes with a crowbar, an Emag, an Access Breaker and a syndicate pinpointer.
@@ -1280,7 +1280,7 @@
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
 
 - type: entity
-  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule ]
   id: BorgModuleEsword
   name: energy sword cyborg module
   description: A weapons module that comes with an energy sword.
@@ -1298,7 +1298,7 @@
 
 - type: entity
   id: BorgModuleDoubleEsword
-  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule ]
   name: double energy sword cyborg module
   description: A weapons module that comes with a double energy sword.
   components:
@@ -1314,7 +1314,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-desword-module }
 
 - type: entity
-  parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule ]
   id: BorgModuleL6C
   name: L6C ROW cyborg module
   description: A weapons module that comes with a L6C.
@@ -1331,7 +1331,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
 
 - type: entity
-  parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule ]
   id: BorgModuleC20r
   name: C-20r ROW cyborg module
   description: A weapons module that comes with a burst-fire C-20r.
@@ -1348,7 +1348,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-c20r-module }
 
 - type: entity
-  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseSyndicateContraband ]
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
   id: BorgModuleMartyr
   name: martyr cyborg module
   description: "A module that comes with an explosive you probably don't want to handle yourself."
@@ -1385,7 +1385,7 @@
 
 # mothership module
 - type: entity
-  parent: [ BaseXenoborgModuleGeneric, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleGeneric, BaseProviderBorgModule ]
   id: MothershipModule
   name: mothership module
   description: A module that helps the mothership borg brains and install other modules.
@@ -1430,7 +1430,7 @@
 
 # xenoborg modules
 - type: entity
-  parent: [ BaseXenoborgModuleGeneric, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleGeneric, BaseProviderBorgModule ]
   id: XenoborgModuleBasic
   name: basic xenoborg module
   description: Essential items for any Xenoborg.
@@ -1454,7 +1454,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-basic-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleGeneric, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleGeneric, BaseProviderBorgModule ]
   id: XenoborgModuleTool
   name: tool xenoborg module
   description: Simple tools for most Xenoborgs.
@@ -1475,7 +1475,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-tool-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleEngi, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleEngi, BaseProviderBorgModule ]
   id: XenoborgModuleAccessBreaker
   name: access breaker xenoborg module
   description: Module with a access breaker.
@@ -1491,7 +1491,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-access-breaker-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleEngi, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleEngi, BaseProviderBorgModule ]
   id: XenoborgModuleFireExtinguisher
   name: fire extinguisher xenoborg module
   description: Module with a self-refueling fire extinguisher.
@@ -1507,7 +1507,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-extinguisher-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleEngi, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleEngi, BaseProviderBorgModule ]
   id: XenoborgModuleDoorControl
   name: door control xenoborg module
   description: Module that allows Xenoborgs to control airlocks.
@@ -1525,7 +1525,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-door-remote-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule ]
   id: XenoborgModuleJammer
   name: jammer xenoborg module
   description: Module with a communication jammer.
@@ -1541,7 +1541,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-jammer-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule ]
   id: XenoborgModuleLaser
   name: laser xenoborg module
   description: Module with a laser gun.
@@ -1557,7 +1557,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-laser-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule ]
   id: XenoborgModuleHeavyLaser
   name: laser cannon xenoborg module
   description: Module with a laser cannon.
@@ -1573,7 +1573,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-laser2-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule ]
   id: XenoborgModuleSpaceMovement
   name: space movement xenoborg module
   description: Module that helps a Xenoborg move better in space.
@@ -1594,7 +1594,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-space-movement-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule ]
   id: XenoborgModuleSword
   name: knife xenoborg module
   description: Module with a kukri knife.
@@ -1611,7 +1611,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-sword-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule ]
   id: XenoborgModuleEnergySword
   name: energy dagger xenoborg module
   description: Module with an energy dagger.
@@ -1628,7 +1628,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-sword2-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule ]
   id: XenoborgModuleHypo
   name: nocturine hypo xenoborg module
   description: Module with a self-refilling nocturine hypo.
@@ -1644,7 +1644,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-hypo-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule ]
   id: XenoborgModuleChameleonProjector
   name: chameleon projector xenoborg module
   description: Module with a chameleon projector.
@@ -1660,7 +1660,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-projector-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule ]
   id: XenoborgModuleCloakDevice
   name: cloaking device xenoborg module
   description: Module with a device that allows xenoborgs to become semi-invisible for some time.
@@ -1676,7 +1676,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-eye-module }
 
 - type: entity
-  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule ]
   id: XenoborgModuleSuperCloakDevice
   name: invisibility device xenoborg module
   description: Module with a device that allows xenoborgs to become truly invisible for a short amount of time.

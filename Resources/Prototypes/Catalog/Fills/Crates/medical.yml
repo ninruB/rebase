@@ -37,29 +37,6 @@
           amount: 2
 
 - type: entity
-  parent: CrateMedical
-  id: CrateChemistryVials
-  name: vial supply crate
-  description: Crate filled with a box of vials.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: BoxVial
-
-- type: entity
-  parent: CrateMedical
-  id: CrateMindShieldImplants
-  name: MindShield implant crate
-  description: Crate filled with 3 MindShield implants.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: MindShieldImplanter
-        amount: 3
-
-- type: entity
   parent: CrateSurgery
   id: CrateMedicalSurgery
   name: surgical supplies crate
@@ -76,25 +53,6 @@
         - id: Saw
         - id: Hemostat
         - id: ClothingMaskSterile
-
-- type: entity
-  parent: CrateMedical
-  id: CrateMedicalScrubs
-  name: medical scrubs crate
-  description: Medical clothings.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: UniformScrubsColorGreen
-        - id: UniformScrubsColorPurple
-        - id: UniformScrubsColorBlue
-        - id: ClothingHeadHatSurgcapBlue
-        - id: ClothingHeadHatSurgcapPurple
-        - id: ClothingHeadHatSurgcapGreen
-        - id: ClothingMaskSterile
-          amount: 3
 
 - type: entity
   parent: CrateMedical

@@ -61,18 +61,6 @@
 
 - type: entity
   parent: CrateGenericSteel
-  id: CrateMaterialBrass
-  name: brass crate
-  description: 90 sheets of brass.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: SheetBrass
-        amount: 3
-
-- type: entity
-  parent: CrateGenericSteel
   id: CrateMaterialPlasteel
   name: plasteel crate
   description: 30 sheets of plasteel.
@@ -114,18 +102,6 @@
     containers:
       entity_storage:
         id: IngotSilver
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateMaterialCardboard
-  name: cardboard crate
-  description: 90 pieces of cardboard.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: MaterialCardboard
-        amount: 3
 
 - type: entity
   parent: CrateGenericSteel
@@ -214,23 +190,3 @@
         - id: SheetSteel
         - id: SheetGlass
         - id: SheetPlastic
-
-#- type: entity
-#  parent: CrateGenericSteel
-#  id: CrateMaterialHFuelTank
-#  name: fueltank crate
-#  components:
-#  - type: EntityTableContainerFill
-#    containers:
-#      entity_storage:
-#        id: WeldingFuelTank
-
-#- type: entity
-#  parent: CrateGenericSteel
-#  id: CrateMaterialHWaterTank
-#  name: watertank crate
-#  components:
-#  - type: EntityTableContainerFill
-#    containers:
-#      entity_storage:
-#        id: WaterTankFull

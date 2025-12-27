@@ -85,23 +85,6 @@
             - tool: Prying
               doAfter: 0.5
 
-    - node: solarpaneluranium
-      entity: SolarPanelUranium
-      edges:
-        - to: solarassembly
-          completed:
-            - !type:SnapToGrid
-              southRotation: true
-            - !type:SpawnPrototype
-              prototype: SheetUGlass1
-              amount: 2
-          conditions:
-            - !type:EntityAnchored
-              anchored: true
-          steps:
-            - tool: Prying
-              doAfter: 0.5
-
     - node: solarpanel
       entity: SolarPanel
       edges:

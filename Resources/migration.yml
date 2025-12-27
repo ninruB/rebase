@@ -20,7 +20,7 @@ ClothingOuterVestKevlar: ClothingOuterArmorBasic
 Intercom: IntercomCommon
 
 # 2023-07-12
-ToyAssistant: ToyFigurinePassenger
+ToyAssistant: ToyFigurineAssistant
 
 # 2023-07-20
 ForensicGloves: ClothingHandsGlovesForensic
@@ -84,9 +84,7 @@ AirlockPainter: SprayPainter
 
 # 2023-08-19
 GeneratorPlasma: PortableGeneratorPacman
-GeneratorUranium: PortableGeneratorSuperPacman
 GeneratorPlasmaMachineCircuitboard: PortableGeneratorPacmanMachineCircuitboard
-GeneratorUraniumMachineCircuitboard: PortableGeneratorSuperPacmanMachineCircuitboard
 
 # 2023-12-10
 SpawnPointSeniorResearcher: null
@@ -122,7 +120,7 @@ WarpPointBeaconService: null
 
 # 2023-12-30
 ClothingEyesGlassesCosmeticSunglasses: ClothingEyesGlassesSunglasses
-SpawnPointAssistant: SpawnPointPassenger
+SpawnPointAssistant: SpawnPointAssistant
 
 # 2024-01-05
 DrinkGoldschlagerBottleFull: DrinkGildlagerBottleFull

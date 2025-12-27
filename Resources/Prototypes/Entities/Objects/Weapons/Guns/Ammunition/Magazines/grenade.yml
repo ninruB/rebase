@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ BaseItem, BaseSecurityContraband ]
+  parent: [ BaseItem ]
   id: BaseMagazineGrenade
   name: grenade cartridge
   components:

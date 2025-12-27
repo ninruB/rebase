@@ -1,8 +1,4 @@
 - type: edgeSpreader
-  id: Kudzu
-  updatesPerSecond: 1
-
-- type: edgeSpreader
   id: Puddle
   updatesPerSecond: 16
 

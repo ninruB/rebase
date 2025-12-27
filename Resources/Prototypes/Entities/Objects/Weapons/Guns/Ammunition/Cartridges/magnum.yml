@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ BaseCartridge, BaseSecurityContraband ]
+  parent: [ BaseCartridge ]
   id: BaseCartridgeMagnum
   name: cartridge (.45 magnum)
   components:

@@ -138,7 +138,7 @@
 
 - type: entity
   name: svalinn laser pistol
-  parent: [BaseWeaponPowerCellSmall, BaseSecurityContraband]
+  parent: [BaseWeaponPowerCellSmall]
   id: WeaponLaserSvalinn
   description: A cheap and widely used laser pistol.
   components:
@@ -167,7 +167,7 @@
 
 - type: entity
   name: retro laser blaster
-  parent: [BaseWeaponBatterySmall, BaseMajorContraband]
+  parent: [BaseWeaponBatterySmall]
   id: WeaponLaserGun
   description: A weapon using light amplified by the stimulated emission of radiation.
   components:
@@ -196,7 +196,7 @@
 
 - type: entity
   name: makeshift laser pistol
-  parent: [BaseWeaponBatterySmall, BaseMinorContraband]
+  parent: [BaseWeaponBatterySmall]
   id: WeaponMakeshiftLaser
   description: Better pray it won't burn your hands off.
   components:
@@ -230,7 +230,7 @@
 
 - type: entity
   name: tesla gun
-  parent: [BaseWeaponBattery, BaseMajorContraband]
+  parent: [BaseWeaponBattery]
   id: WeaponTeslaGun
   description: The power of the primordial element of lightning in your hands.
   components:
@@ -263,7 +263,7 @@
 
 - type: entity
   name: laser carbine
-  parent: [BaseLaserRifle, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseLaserRifle, BaseGunWieldable]
   id: WeaponLaserCarbine
   description: Favoured by Nanotrasen Security for being cheap and easy to use.
 
@@ -282,7 +282,7 @@
 
 - type: entity
   name: pulse pistol
-  parent: [BaseWeaponBatterySmall, BaseCentcommContraband]
+  parent: [BaseWeaponBatterySmall]
   id: WeaponPulsePistol
   description: A state of the art energy pistol favoured as a sidearm by the NT operatives.
   components:
@@ -322,7 +322,7 @@
 
 - type: entity
   name: pulse carbine
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseCentcommContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponPulseCarbine
   description: A high tech energy carbine favoured by the NT-ERT operatives.
   components:
@@ -360,7 +360,7 @@
 
 - type: entity
   name: pulse rifle
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseCentcommContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponPulseRifle
   description: A weapon that is almost as infamous as its users.
   components:
@@ -396,7 +396,7 @@
 
 - type: entity
   name: laser cannon
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponLaserCannon
   description: A heavy duty, high powered laser weapon.
   components:
@@ -432,7 +432,7 @@
 
 - type: entity
   name: portable particle decelerator
-  parent: [BaseWeaponBattery, BaseEngineeringContraband]
+  parent: [BaseWeaponBattery]
   id: WeaponParticleDecelerator
   description: A portable particle decelerator capable of decomposing a tesla or singularity.
   components:
@@ -463,7 +463,7 @@
 
 - type: entity
   name: x-ray cannon
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponXrayCannon
   description: An experimental weapon that uses concentrated x-ray energy against its target.
   components:
@@ -537,7 +537,7 @@
 
 - type: entity
   name: disabler
-  parent: [WeaponDisablerPractice, BaseSecurityCommandContraband]
+  parent: [WeaponDisablerPractice]
   id: WeaponDisabler
   description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
   components:
@@ -566,7 +566,7 @@
 
 - type: entity
   name: disabler SMG
-  parent: [BaseWeaponBattery, BaseSecurityContraband]
+  parent: [BaseWeaponBattery]
   id: WeaponDisablerSMG
   description: Advanced weapon that exhausts organic targets, weakening them until they collapse.
   components:
@@ -607,7 +607,7 @@
 
 - type: entity
   name: taser
-  parent: [BaseWeaponBatterySmall, BaseSecurityContraband]
+  parent: [BaseWeaponBatterySmall]
   id: WeaponTaser
   description: A low-capacity, energy-based stun gun used by security teams to subdue targets at close range.
   components:
@@ -645,7 +645,7 @@
 
 - type: entity
   name: elite taser
-  parent: [ BaseCentcommContraband, WeaponTaser ]
+  parent: [  WeaponTaser ]
   id: WeaponTaserSuper
   suffix: ADMEME
   description: A low-capacity, energy-based stun gun used by elite security teams to disable even the toughest of targets.
@@ -662,7 +662,7 @@
 
 - type: entity
   name: antique laser pistol
-  parent: [BaseWeaponBatterySmall, BaseGrandTheftContraband]
+  parent: [BaseWeaponBatterySmall]
   id: WeaponAntiqueLaser
   description: This is an antique laser pistol. All craftsmanship is of the highest quality. It is decorated with a mahogany grip and chrome filigree. The object menaces with spikes of energy. On the item is an image of a captain and a clown. The clown is dead. The captain is striking a heroic pose.
   components:
@@ -706,7 +706,7 @@
 
 - type: entity
   name: advanced laser pistol
-  parent: [BaseWeaponBatterySmall, BaseSecurityContraband]
+  parent: [BaseWeaponBatterySmall]
   id: WeaponAdvancedLaser
   description: An experimental high-energy laser pistol with a self-charging nuclear battery.
   components:
@@ -746,7 +746,7 @@
 
 - type: entity
   name: C.H.I.M.P. handcannon
-  parent: [BaseWeaponBatterySmall, BaseScienceContraband]
+  parent: [BaseWeaponBatterySmall]
   id: WeaponPistolCHIMP
   description: Just because it's a little C.H.I.M.P. doesn't mean it can't punch like an A.P.E.
   components:
@@ -794,7 +794,7 @@
 
 - type: entity
   name: experimental C.H.I.M.P. handcannon
-  parent: [WeaponPistolCHIMP, BaseSyndicateContraband]
+  parent: [WeaponPistolCHIMP]
   id: WeaponPistolCHIMPUpgraded
   description: This C.H.I.M.P. seems to have a greater punch than usual...
   components:
@@ -840,7 +840,7 @@
 
 - type: entity
   name: energy shotgun
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponEnergyShotgun
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
   components:
@@ -884,7 +884,7 @@
 
 - type: entity
   name: energy magnum
-  parent: [BaseWeaponBatterySmall, BaseGrandTheftContraband]
+  parent: [BaseWeaponBatterySmall]
   id: WeaponEnergyMagnum
   description: A high powered self-charging energy pistol designed for elite security personnel. It has has three firing modes allowing for either high damage, window piercing, or non-lethal disabling.
   components:
@@ -931,7 +931,7 @@
 
 - type: entity
   name: temperature gun
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponTemperatureGun
   description: An advanced gun that shoots body-temperature-changing beams. This probably constitutes as some kind of war crime.
   components:
@@ -974,18 +974,18 @@
     price: 100
 
 - type: entity
-  parent: [WeaponAdvancedLaser, BaseXenoborgContraband]
+  parent: [WeaponAdvancedLaser]
   id: WeaponLaserGunXenoborg
   name: xenoborg laser gun
 
 - type: entity
-  parent: [WeaponLaserCannon, BaseXenoborgContraband]
+  parent: [WeaponLaserCannon]
   id: WeaponLaserCannonXenoborg
   name: xenoborg laser cannon
   components:
   - type: BatterySelfRecharger
     autoRechargeRate: 30
-  # "remove" wield bonus and penalty so borgs can use it 
+  # "remove" wield bonus and penalty so borgs can use it
   - type: GunWieldBonus
     minAngle: 0
     maxAngle: 0

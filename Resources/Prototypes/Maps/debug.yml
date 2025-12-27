@@ -12,7 +12,7 @@
           mapNameTemplate: "Sepna Starsystem"
         # - type: StationJobs
         #   availableJobs:
-        #     Passenger: [ 0, 0 ]
+        #     Assistant: [ 0, 0 ]
 
 - type: gameMap
   id: Dev
@@ -30,30 +30,3 @@
           - Captain
           availableJobs:
             Captain: [ -1, -1 ]
-#            LevymanDSM: [ -1, -1 ]
-#            InfanteerNCSP: [ -1, -1 ]
-#            PartisanNCWL: [ -1, -1 ]
-#            CorpsecSHI: [ -1, -1 ]
-        # Goobstation blob-config-start DEBUG
-        # - type: StationBlobConfig
-        #   stageBegin: 20
-        #   stageCritical: 50
-        #   stageTheEnd: 100
-        # Goobstation blob-config-end
-
-- type: gameMap
-  id: TestTeg
-  mapName: Test TEG
-  mapPath: /Maps/Test/test_teg.yml
-  minPlayers: 0
-  stations:
-    TEG:
-      stationProto: TestStation
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: "TEG"
-        - type: StationJobs
-          overflowJobs:
-            - ChiefEngineer
-          availableJobs:
-            ChiefEngineer: [ -1, -1 ]

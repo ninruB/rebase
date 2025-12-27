@@ -33,20 +33,6 @@
     cleanCost: 0.13
 
 - type: reagent
-  id: SpaceCleaner
-  name: reagent-name-space-cleaner
-  desc: reagent-desc-space-cleaner
-  physicalDesc: reagent-physical-desc-lemony-fresh
-  flavor: bitter
-  color: "#c8ff69"
-  recognizable: true
-  boilingPoint: 147.0 # Made this up, loosely based on bleach
-  meltingPoint: -11.0
-  tileReactions:
-    - !type:CleanTileReaction {}
-    - !type:CleanDecalsReaction {}
-
-- type: reagent
   id: SoapReagent
   name: reagent-name-soap
   desc: reagent-desc-soap
@@ -76,24 +62,6 @@
           reagent: SoapReagent
           min: 6
         probability: 0.20
-
-- type: reagent
-  id: SpaceLube
-  name: reagent-name-space-lube
-  desc: reagent-desc-space-lube
-  evaporationSpeed: 0.1
-  slipData:
-    requiredSlipSpeed: 1
-    superSlippery: true
-  physicalDesc: reagent-physical-desc-shiny
-  flavor: funny
-  color: "#77b58e"
-  recognizable: true
-  boilingPoint: 290.0 # Glycerin
-  meltingPoint: 18.2
-  tileReactions:
-  - !type:SpillTileReaction
-  friction: 0.05
 
 - type: reagent
   id: SpaceGlue

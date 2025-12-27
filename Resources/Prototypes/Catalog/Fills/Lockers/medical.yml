@@ -36,35 +36,6 @@
       entity_storage: !type:NestedSelector
         tableId: LockerFillMedicine
 
-- type: entityTable
-  id: LockerFillMedicalDoctor
-  table: !type:AllSelector
-    children:
-    - id: HandheldHealthAnalyzer
-      prob: 0.6
-    - id: ClothingHeadMirror
-      prob: 0.1
-    - id: ClothingHandsGlovesLatex
-    - id: ClothingHeadsetMedical
-    - id: ClothingEyesHudMedical
-    - !type:GroupSelector
-      children:
-      - id: ClothingHeadHatSurgcapGreen
-        weight: 0.1
-      - id: ClothingHeadHatSurgcapPurple
-        weight: 0.05
-      - id: ClothingHeadHatSurgcapBlue
-        weight: 0.90
-    - !type:GroupSelector
-      children:
-      - id: UniformScrubsColorBlue
-        weight: 0.5
-      - id: UniformScrubsColorGreen
-        weight: 0.1
-      - id: UniformScrubsColorPurple
-        weight: 0.05
-    - id: ClothingMaskSterile
-
 - type: entity
   parent: LockerMedical
   id: LockerMedicalFilled
@@ -114,31 +85,3 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: LockerFillChemistry
-
-- type: entityTable
-  id: LockerFillParamedic
-  table: !type:AllSelector
-    children:
-    - id: ClothingOuterHardsuitVoidParamed
-    - id: ClothingOuterCoatParamedicWB
-    - id: ClothingHeadHatParamedicsoft
-    - id: ClothingOuterWinterPara
-    - id: ClothingUniformJumpsuitParamedic
-    - id: ClothingUniformJumpskirtParamedic
-    - id: ClothingEyesHudMedical
-    - id: ClothingHandsGlovesLatex
-    - id: ClothingHeadsetMedical
-    - id: ClothingMaskSterile
-    - id: HandheldGPSBasic
-    - id: MedkitFilled
-      prob: 0.3
-
-- type: entity
-  parent: LockerParamedic
-  id: LockerParamedicFilled
-  suffix: Filled
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: LockerFillParamedic

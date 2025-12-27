@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ BaseItem, BaseSecurityContraband ]
+  parent: [ BaseItem ]
   id: BaseMagazineShotgun
   name: ammo drum (.50 shells)
   components:

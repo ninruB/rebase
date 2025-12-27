@@ -1,6 +1,6 @@
 ﻿- type: entity
   abstract: true
-  parent: [ BaseItem, BaseMagicalContraband ]
+  parent: [ BaseItem ]
   id: BaseSpellbook
   name: spellbook
   components:
@@ -22,7 +22,7 @@
 # For the Wizard antagonist
 # Do not add discounts or price inflation
 - type: entity
-  parent: [ BaseItem, StorePresetSpellbook, BaseMagicalContraband ]
+  parent: [ BaseItem, StorePresetSpellbook ]
   id: WizardsGrimoire
   name: wizard's grimoire
   suffix: Wizard

@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ BaseCartridge, BaseSecurityContraband ]
+  parent: [ BaseCartridge ]
   id: BaseCartridgeLightRifle
   name: cartridge (.30 rifle)
   components:

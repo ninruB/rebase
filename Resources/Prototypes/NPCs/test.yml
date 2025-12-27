@@ -9,14 +9,3 @@
         - !type:HTNPrimitiveTask
           operator: !type:MoveToOperator
             pathfindInPlanning: false
-
-
-- type: entity
-  id: MobPathfindDummy
-  name: pathfind dummy
-  suffix: NPC
-  parent: MobXenoRouny
-  components:
-  - type: HTN
-    rootTask:
-      task: MoveToPathfindPointCompound

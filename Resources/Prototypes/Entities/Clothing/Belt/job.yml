@@ -364,7 +364,7 @@
   - type: Appearance
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSecurityContraband]
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
   id: ClothingBeltSecurity
   name: security belt
   description: Can hold security gear like handcuffs and flashes.

@@ -60,9 +60,6 @@
   id: Bandana # CargoBounty: BountyBandana
 
 - type: Tag
-  id: BaseballBat # CargoBounty: BountyBaseballBat
-
-- type: Tag
   id: BBQsauce # Storage whitelist: ClothingBeltChef and FoodCartHot. ItemMapper: ClothingBeltChef and FoodCartHot
 
 - type: Tag
@@ -166,9 +163,6 @@
 
 - type: Tag
   id: Brain # Storage whitelist: MMI. CargoBounty: BountyBrain
-
-- type: Tag
-  id: BrassInstrument # MachineBoard construction: DawInstrumentMachineCircuitboard
 
 - type: Tag
   id: Bread # CargoBounty: BountyBread. Blacklisted in BountyFruit and BountyVegetable
@@ -1007,24 +1001,6 @@
 - type: Tag
   id: Ointment # Storage whitelist: ClothingBeltMedical
 
-- type: Tag
-  id: Ore # Storage whitelist: OreBag, OreBox. MaterialStorage whitelist: OreProcessor
-
-- type: Tag
-  id: OreBananium # CargoBounty: BountySalvageOreBananium
-
-- type: Tag
-  id: OreGold # CargoBounty: BountySalvageOreGold
-
-- type: Tag
-  id: OrePlasma # CargoBounty: BountySalvageOrePlasma
-
-- type: Tag
-  id: OreSilver # CargoBounty: BountySalvageOreSilver
-
-- type: Tag
-  id: OreUranium # CargoBounty: BountySalvageOreUranium
-
 ## P ##
 
 - type: Tag
@@ -1248,13 +1224,10 @@
   id: SecBeltEquip # Storage whitelist: ClothingBeltSecurity
 
 - type: Tag
-  id: SecurePlasmaWindoor # Used in ConstructionGraph "Windoor" to navigate between Windoor, PlasmaWindoor, and UraniumWindoor airlocks.
+  id: SecurePlasmaWindoor # Used in ConstructionGraph "Windoor" to navigate between Windoor, PlasmaWindoor, airlocks.
 
 - type: Tag
-  id: SecureUraniumWindoor # Used in ConstructionGraph "Windoor" to navigate between Windoor, PlasmaWindoor, and UraniumWindoor airlocks.
-
-- type: Tag
-  id: SecureWindoor # Used in ConstructionGraph "Windoor" to navigate between Windoor, PlasmaWindoor, and UraniumWindoor airlocks.
+  id: SecureWindoor # Used in ConstructionGraph "Windoor" to navigate between Windoor, PlasmaWindoor, airlocks.
 
 - type: Tag
   id: SecurityHelmet # ConstructionGraph: HelmetJustice
@@ -1453,9 +1426,6 @@
 
 - type: Tag
   id: Unstackable # To prevent things like atmos devices (filters etc) being stacked on one tile. See NoUnstackableInTile
-
-- type: Tag
-  id: UraniumGlassShard # ConstructionGraph: ImprovisedArrowUranium, UraniumShiv, SpearUranium
 
 - type: Tag
   id: UtilityBelt # ConstructionGraph: scraparmor

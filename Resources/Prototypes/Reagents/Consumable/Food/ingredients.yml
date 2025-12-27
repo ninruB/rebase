@@ -20,41 +20,6 @@
         amount: 0.1
 
 - type: reagent
-  id: Cornmeal
-  name: reagent-name-cornmeal
-  group: Foods
-  desc: reagent-desc-cornmeal
-  physicalDesc: reagent-physical-desc-powdery
-  flavor: corn #so corn doesnt taste chalky
-  color: tan
-  metabolisms:
-    Food:
-      effects:
-      - !type:SatiateThirst
-        factor: -0.2 #its cornflour
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.1
-
-- type: reagent
-  id: Oats
-  name: reagent-name-oats
-  group: Foods
-  desc: reagent-desc-oats
-  physicalDesc: reagent-physical-desc-coarse
-  flavor: oats
-  color: tan
-  metabolisms:
-    Food:
-      effects:
-      - !type:AdjustReagent
-        reagent: Sugar
-        amount: 0.2
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.3
-
-- type: reagent
   id: Enzyme
   name: reagent-name-enzyme
   group: Foods
@@ -94,35 +59,6 @@
       - !type:AdjustReagent
         reagent: Protein
         amount: 1
-
-- type: reagent
-  id: Blackpepper
-  name: reagent-name-blackpepper
-  group: Foods
-  desc: reagent-desc-blackpepper
-  physicalDesc: reagent-physical-desc-grainy
-  flavor: peppery
-  color: black
-  recognizable: true
-  metabolisms:
-    Food:
-      effects:
-      - !type:Emote
-        emote: Cough
-        showInChat: true
-        showInGuidebook: true
-        probability: 0.05
-  reactiveEffects:
-    Acidic:
-      methods: [ Touch ]
-      effects:
-      - !type:Emote
-        emote: Cough
-        showInGuidebook: true
-        conditions:
-        - !type:BreathingCondition
-        - !type:InternalsCondition
-          inverted: true
 
 - type: reagent
   id: Vinegar
@@ -169,23 +105,6 @@
         amount: 0.1
 
 - type: reagent
-  id: OilOlive
-  name: reagent-name-oil-olive
-  group: Foods
-  desc: reagent-desc-oil-olive
-  physicalDesc: reagent-physical-desc-oily
-  flavor: oily
-  flavorMinimum: 0.05
-  color: olive
-  recognizable: true
-  metabolisms:
-    Food:
-      effects:
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.75
-
-- type: reagent
   id: Oil
   name: reagent-name-oil
   group: Foods
@@ -199,67 +118,6 @@
   meltingPoint: -16.0
   tileReactions:
   - !type:FlammableTileReaction {}
-
-- type: reagent
-  id: CapsaicinOil
-  name: reagent-name-capsaicin-oil
-  group: Foods
-  desc: reagent-desc-capsaicin-oil
-  physicalDesc: reagent-physical-desc-oily
-  flavor: spicy
-  flavorMinimum: 0.05
-  color: "#FF0000"
-  recognizable: true
-  meltingPoint: 146
-  boilingPoint: 410 # Really high boiling point compared to its melting
-  metabolisms:
-    Food:
-      effects:
-      - !type:AdjustReagent
-        reagent: Nutriment #Oils enhance nutrition
-        amount: 0.75
-    Poison:
-      effects:
-        - !type:AdjustTemperature
-          amount: 250 # thermal energy, not temp
-        - !type:HealthChange
-          conditions:
-            - !type:ReagentCondition
-              reagent: CapsaicinOil
-              min: 5
-          damage:
-            types:
-              Caustic: 1
-        - !type:PopupMessage
-          type: Local
-          messages: [ "capsaicin-effect-light-burn" ]
-          probability: 0.2
-
-- type: reagent
-  id: CocoaPowder #Candy and chocolate
-  name: reagent-name-cocoapowder
-  group: Foods
-  desc: reagent-desc-cocoapowder
-  physicalDesc: reagent-physical-desc-powdery
-  flavor: chocolate
-  color: "#800000"
-  meltingPoint: 146.0
-  metabolisms:
-    Food:
-      effects:
-      - !type:SatiateHunger
-        conditions:
-        - !type:ReagentCondition #Only satiates when eaten with nutriment
-          reagent: Nutriment
-          min: 0.1
-        factor: 1
-  plantMetabolism:
-  - !type:PlantAdjustNutrition
-    amount: 0.1
-  - !type:PlantAdjustWeeds
-    amount: 2
-  - !type:PlantAdjustPests
-    amount: 2
 
 - type: reagent
   id: Butter
@@ -278,51 +136,3 @@
       - !type:AdjustReagent
         reagent: Nutriment
         amount: 0.75
-
-- type: reagent
-  id: TeaPowder
-  name: reagent-name-tea-powder
-  desc: reagent-desc-tea-powder
-  physicalDesc: reagent-physical-desc-powdery
-  flavor: tea
-  color: "#7F8400"
-  group: Foods
-  metabolisms:
-    Food:
-      effects:
-      - !type:SatiateThirst
-        factor: -0.2
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.1
-
-- type: reagent
-  id: FrostOil
-  name: reagent-name-frost-oil
-  group: Foods
-  desc: reagent-desc-frost-oil
-  physicalDesc: reagent-physical-desc-oily
-  flavor: cold
-  color: skyblue
-  metabolisms:
-    Food:
-      effects:
-      - !type:AdjustReagent
-        reagent: Nutriment #Oils enhance nutrition
-        amount: 0.75
-    Poison:
-      effects:
-      - !type:AdjustTemperature
-        amount: -250 # thermal energy, not temp
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: FrostOil
-          min: 5
-        damage:
-          types:
-            Cold: 1
-      - !type:PopupMessage
-        type: Local
-        messages: [ "frost-oil-effect-light-cold" ]
-        probability: 0.2

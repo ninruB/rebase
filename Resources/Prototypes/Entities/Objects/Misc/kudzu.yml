@@ -269,7 +269,7 @@
 - type: entity
   name: dark haze
   id: ShadowKudzu
-  parent: [ BaseKudzu, BaseShadow ]
+  parent: [ BaseKudzu ]
   components:
     - type: Physics
       canCollide: false

@@ -30,4 +30,4 @@
           overflowJobs: []
           availableJobs:
             Captain: [ 10, 10 ]
-            Passenger: [ 10, 10 ]
+            Assistant: [ 10, 10 ]

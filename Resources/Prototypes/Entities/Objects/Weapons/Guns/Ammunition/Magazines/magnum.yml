@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ BaseMagazinePistol, BaseSecurityContraband ]
+  parent: [ BaseMagazinePistol ]
   id: BaseMagazineMagnum
   name: pistol magazine (.45 magnum)
   components:

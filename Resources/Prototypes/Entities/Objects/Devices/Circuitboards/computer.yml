@@ -329,7 +329,7 @@
     prototype: ComputerCrewMonitoring
 
 - type: entity
-  parent: [BaseComputerCircuitboard, BaseCommandContraband]
+  parent: [BaseComputerCircuitboard]
   id: IDComputerCircuitboard
   name: ID card computer board
   description: A computer printed circuit board for an ID card console.
@@ -356,7 +356,7 @@
       prototype: computerBodyScanner
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseCommandContraband ]
+  parent: [ BaseComputerCircuitboard ]
   id: CommsComputerCircuitboard
   name: communications computer board
   description: A computer printed circuit board for a communications console.
@@ -367,7 +367,7 @@
       prototype: ComputerComms
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseSyndicateContraband ]
+  parent: [ BaseComputerCircuitboard ]
   id: SyndicateCommsComputerCircuitboard
   name: syndicate communications computer board
   description: A computer printed circuit board for a syndicate communications console.
@@ -378,7 +378,7 @@
     prototype: SyndicateComputerComms
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseSyndicateContraband ]
+  parent: [ BaseComputerCircuitboard ]
   id: WizardCommsComputerCircuitboard
   name: wizard communications computer board
   description: A computer printed circuit board for a wizard communications console.
@@ -389,7 +389,7 @@
     prototype: WizardComputerComms
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseCentcommContraband ]
+  parent: [ BaseComputerCircuitboard ]
   id: CentcommCommsComputerCircuitboard
   name: central command communications computer board
   description: A computer printed circuit board for a central command communications console.
@@ -461,7 +461,7 @@
     prototype: ComputerShuttle
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseSyndicateContraband ]
+  parent: [ BaseComputerCircuitboard ]
   id: SyndicateShuttleConsoleCircuitboard
   name: syndicate shuttle console board
   description: A computer printed circuit board for a syndicate shuttle console.
@@ -494,7 +494,7 @@
       prototype: ComputerIFF
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseSyndicateContraband ]
+  parent: [ BaseComputerCircuitboard ]
   id: ComputerIFFSyndicateCircuitboard
   name: syndicate IFF console board
   description: Allows you to control the IFF and stealth characteristics of this vessel.

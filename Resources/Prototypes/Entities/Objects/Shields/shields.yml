@@ -83,7 +83,7 @@
 
 - type: entity
   name: riot shield
-  parent: [ BaseRepairableShield, BaseSecurityContraband ]
+  parent: [ BaseRepairableShield ]
   id: RiotShield
   description: A large tower shield. Good for controlling crowds.
   components:
@@ -104,7 +104,7 @@
 
 - type: entity
   name: laser shield
-  parent: [ BaseRepairableShield, BaseSecurityContraband ]
+  parent: [ BaseRepairableShield ]
   id: RiotLaserShield
   description: A shield built for withstanding lasers, but not much else.
   components:
@@ -124,7 +124,7 @@
 
 - type: entity
   name: ballistic shield
-  parent: [ BaseRepairableShield, BaseSecurityContraband ]
+  parent: [ BaseRepairableShield ]
   id: RiotBulletShield
   description: A shield built for protecting against ballistics, but not much else.
   components:
@@ -361,37 +361,8 @@
 #Magic/Cult Shields (give these to wizard for now)
 
 - type: entity
-  name: clockwork shield
-  parent: BaseRepairableShield
-  id: ClockworkShield
-  description: Ratvar oyrffrf lbh jvgu uvf cebgrpgvba.
-  components:
-    - type: Sprite
-      state: ratvarian-icon
-    - type: Item
-      heldPrefix: ratvarian
-    - type: Blocking
-      passiveBlockModifier:
-        coefficients:
-          Blunt: 0.8
-          Slash: 0.8
-          Piercing: 0.8
-          Heat: 1.5
-      activeBlockModifier:
-        coefficients:
-          Blunt: 0.7
-          Slash: 0.7
-          Piercing: 0.7
-          Heat: 1.5
-        flatReductions:
-          Blunt: 1
-          Slash: 1
-          Piercing: 1
-      #Have it break into brass when clock cult is in
-
-- type: entity
   name: mirror shield
-  parent: [ BaseShield, BaseMagicalContraband ]
+  parent: [ BaseShield ]
   id: MirrorShield
   description: Eerily glows red... you hear the geometer whispering
   components:
@@ -439,7 +410,7 @@
 
 - type: entity
   name: energy shield
-  parent: [BaseItem, BaseSyndicateContraband]
+  parent: [BaseItem]
   id: EnergyShield
   description: Exotic energy shield, when folded, can even fit in your pocket.
   components:

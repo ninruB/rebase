@@ -51,16 +51,6 @@
     - id: GlockenspielInstrument
 
 - type: entityTable
-  id: BrassInstrumentTable
-  table: !type:GroupSelector
-    children:
-    - id: TrumpetInstrument
-    - id: TromboneInstrument
-    - id: FrenchHornInstrument
-    - id: EuphoniumInstrument
-    - id: TubaInstrument
-
-- type: entityTable
   id: StringInstrumentTable
   table: !type:GroupSelector
     children:

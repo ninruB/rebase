@@ -27,14 +27,6 @@
     prototype: AsteroidRock
 
 - type: entity
-  id: WallSpawnAsteroidUraniumCrab
-  parent: WallSpawnAsteroid
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: SpawnOnDespawn
-    prototype: AsteroidRockUraniumCrab
-
-- type: entity
   id: WallSpawnAsteroidBananium
   parent: WallSpawnAsteroid
   categories: [ HideSpawnMenu ]

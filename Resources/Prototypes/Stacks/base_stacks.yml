@@ -27,16 +27,3 @@
   abstract: true
   id: BaseVeryLargeStack
   maxCount: 100
-
-# size used by "sheets." Usually materials like steel, glass, or plasma
-- type: stack
-  abstract: true
-  id: BaseSheetStack
-  maxCount: 30
-
-# Used by tiles
-- type: stack
-  abstract: true
-  id: BaseTileStack
-  icon: { sprite: /Textures/Objects/Tiles/tile.rsi, state: steel }
-  maxCount: 30
