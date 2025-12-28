@@ -461,28 +461,6 @@
 
 - type: entity
   parent: SeedBase
-  name: packet of ambrosia vulgaris seeds
-  description: "A medicinal plant for the common folk."
-  id: AmbrosiaVulgarisSeeds
-  components:
-    - type: Seed
-      seedId: ambrosiaVulgaris
-    - type: Sprite
-      sprite: Objects/Specific/Hydroponics/ambrosia_vulgaris.rsi
-
-- type: entity
-  parent: SeedBase
-  name: packet of ambrosia deus seeds
-  description: "A medicinal plant for the gods themselves."
-  id: AmbrosiaDeusSeeds
-  components:
-    - type: Seed
-      seedId: ambrosiaDeus
-    - type: Sprite
-      sprite: Objects/Specific/Hydroponics/ambrosia_deus.rsi
-
-- type: entity
-  parent: SeedBase
   name: packet of galaxythistle seeds
   description: "Brushes of starry nights."
   id: GalaxythistleSeeds

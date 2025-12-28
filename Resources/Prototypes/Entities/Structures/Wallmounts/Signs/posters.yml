@@ -159,15 +159,6 @@
 
 - type: entity
   parent: PosterBase
-  id: PosterContrabandAmbrosiaVulgaris
-  name: "Ambrosia Vulgaris"
-  description: "This poster is lookin' pretty trippy man."
-  components:
-  - type: Sprite
-    state: poster12_contraband
-
-- type: entity
-  parent: PosterBase
   id: PosterContrabandDonutCorp
   name: "Donut Corp."
   description: "This poster is an unauthorized advertisement for Donut Corp."

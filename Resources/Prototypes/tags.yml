@@ -25,30 +25,12 @@
   id: AllowGhostShownByEvent # Used by GhostSystem to show tagged ghosts (usually at round end).
 
 - type: Tag
-  id: Ambrosia # ConstructionGraph: flowerwreath
-
-- type: Tag
-  id: AnomalyHost # Targeting whitelist: BaseAnomalyInjector
-
-- type: Tag
-  id: AppraisalTool # Storage whitelist: BaseClothingBeltEngineering
-
-- type: Tag
   id: Apron # ConstructionGraph: scraparmor
-
-- type: Tag
-  id: Arrow # Storage whitelist: ClothingBeltQuiver
-
-- type: Tag
-  id: ArtifactFragment # Storage whitelist: OreBag. CargoBounty: BountyArtifactFragment. ConstructionGraph: Artifact
 
 ## B ##
 
 - type: Tag
   id: Backpack # ConstructionGraph: ClothingBagPet
-
-- type: Tag
-  id: Balloon # Default value in BalloonPopperComponent. Tagged entities will be viscously maimed by corresponding poppers.
 
 - type: Tag
   id: Banana # CargoBounty: BountyBanana
@@ -635,7 +617,7 @@
   id: GlassBeaker # This tag is used as a common ingredient in the construction of various machines.
 
 - type: Tag
-  id: GlassShard # ConstructionGraph: BladedFlatcapBrown, BladedFlatcapGrey, ImprovisedArrow, ImprovisedShotgunShellGraph, Shiv, Spear
+  id: GlassShard # ConstructionGraph: BladedFlatcapBrown, BladedFlatcapGrey, ImprovisedShotgunShellGraph, Shiv, Spear
 
 - type: Tag
   id: Goat # Reproductive partner key
@@ -1074,7 +1056,7 @@
   id: PlantSampleTaker # Used by PlantHolderSystem to make tagged entities a pseudo-tool for trimming seeds. TODO this sucks!
 
 - type: Tag
-  id: PlasmaGlassShard # ConstructionGraph: ImprovisedArrowPlasma, PlasmaShiv, SpearPlasma
+  id: PlasmaGlassShard # ConstructionGraph, PlasmaShiv, SpearPlasma
 
 - type: Tag
   id: Plastic # Used by MicrowaveSystem to turn tagged entities into trash.
