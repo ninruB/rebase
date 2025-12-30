@@ -8,7 +8,7 @@ public sealed partial class WhiteCVars
     /// What intensity will the grain shader be at
     /// </summary>
     public static readonly CVarDef<float> FilmGrainStrength =
-        CVarDef.Create("graphics.film_grain_strength", 20f, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("graphics.film_grain_strength", 100f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
     /// Grain shader on/off

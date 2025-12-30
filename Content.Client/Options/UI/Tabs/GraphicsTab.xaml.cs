@@ -75,8 +75,9 @@ public sealed partial class GraphicsTab : Control
         Control.AddOptionPercentSlider(
             WhiteCVars.FilmGrainStrength,
             FilmGrainSlider,
-            1,
-            500);
+            0,
+            2,
+            100);
 
         Control.Initialize();
 
@@ -84,7 +85,6 @@ public sealed partial class GraphicsTab : Control
         _cfg.OnValueChanged(CCVars.ViewportMaximumWidth, _ => UpdateViewportWidthRange());
 
         UpdateViewportWidthRange();
-        // UpdateFilmGrainValue();
         UpdateViewportSettingsVisibility();
     }
 
@@ -105,11 +105,6 @@ public sealed partial class GraphicsTab : Control
         ViewportWidthSlider.Slider.MinValue = min;
         ViewportWidthSlider.Slider.MaxValue = max;
     }
-
-    // private void UpdateFilmGrainValue()
-    // {
-    //     // nothing for now
-    // }
 
     private sealed class OptionLightingQuality : BaseOption
     {

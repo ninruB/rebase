@@ -36,15 +36,6 @@
                 <!-- WD EDIT START -->
                 <CheckBox Name="FilmGrainCheckBox" Text="{Loc 'ui-options-film-grain'}" />
                 <ui:OptionSlider Name="FilmGrainSlider" Title="{Loc ui-options-film-grain-strength}" />
-                <!-- <BoxContainer Name="FilmGrainBox" Orientation="Horizontal">
-                    <Label Name="FilmGrainText"/>
-                    <Control MinSize="4 0" />
-                    <Slider Name="FilmGrainSlider"
-                            MinValue="1"
-                            MaxValue="500"
-                            Rounded="True"
-                            MinWidth="500" />
-                </BoxContainer> -->
                 <!-- WD EDIT END -->
             </BoxContainer>
         </ScrollContainer>
