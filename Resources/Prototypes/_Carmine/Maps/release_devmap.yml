@@ -27,7 +27,6 @@
           attributes:
             proper: true
         - type: StationJobs
-          overflowJobs: []
           availableJobs:
             Captain: [ 10, 10 ]
             Passenger: [ 10, 10 ]

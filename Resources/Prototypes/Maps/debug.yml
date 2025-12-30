@@ -26,8 +26,6 @@
         - type: StationNameSetup
           mapNameTemplate: "Dev"
         - type: StationJobs
-          overflowJobs:
-          - Captain
           availableJobs:
             Captain: [ -1, -1 ]
 #            LevymanDSM: [ -1, -1 ]

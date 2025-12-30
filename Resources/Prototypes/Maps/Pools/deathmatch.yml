@@ -1,5 +1,4 @@
 - type: gameMapPool
   id: DeathMatchMapPool
   maps:
-  - MeteorArena
-  - dm01-entryway
+  - Empty #carmine edit so the yaml linter doesnt yell at us
