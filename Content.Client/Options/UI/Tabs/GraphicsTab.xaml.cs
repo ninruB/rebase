@@ -72,11 +72,11 @@ public sealed partial class GraphicsTab : Control
         Control.AddOptionCheckBox(CCVars.ParallaxLowQuality, ParallaxLowQualityCheckBox);
         Control.AddOptionCheckBox(CCVars.HudFpsCounterVisible, FpsCounterCheckBox);
         Control.AddOptionCheckBox(WhiteCVars.FilmGrain, FilmGrainCheckBox);
-        Control.AddOptionSlider(
+        Control.AddOptionPercentSlider(
             WhiteCVars.FilmGrainStrength,
             FilmGrainSlider,
-            (int)FilmGrainSlider.Slider.MinValue,
-            (int)FilmGrainSlider.Slider.MaxValue);
+            1,
+            500);
 
         Control.Initialize();
 
@@ -84,6 +84,7 @@ public sealed partial class GraphicsTab : Control
         _cfg.OnValueChanged(CCVars.ViewportMaximumWidth, _ => UpdateViewportWidthRange());
 
         UpdateViewportWidthRange();
+        // UpdateFilmGrainValue();
         UpdateViewportSettingsVisibility();
     }
 
@@ -105,14 +106,10 @@ public sealed partial class GraphicsTab : Control
         ViewportWidthSlider.Slider.MaxValue = max;
     }
 
-    private void UpdateFilmGrainRange()
-    {
-        var min = 1; //hardcoded because i cba | .2 - 2025
-        var max = 500;
-
-        FilmGrainSlider.Slider.MinValue = min;
-        FilmGrainSlider.Slider.MaxValue = max;
-    }
+    // private void UpdateFilmGrainValue()
+    // {
+    //     // nothing for now
+    // }
 
     private sealed class OptionLightingQuality : BaseOption
     {
