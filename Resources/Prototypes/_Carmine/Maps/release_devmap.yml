@@ -17,17 +17,16 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Carmine Devmap - Release'
-        - type: VesselDesignation
-          designation: vessel-designation-headquarters
-        - type: VesselDescription
-          description: A place of ample tests.
-        - type: VesselMusic
-          ambientMusicPrototype: PortBalreskaMusic
+        # - type: VesselDesignation
+        #   designation: vessel-designation-headquarters
+        # - type: VesselDescription
+        #   description: A place of ample tests.
+        # - type: VesselMusic
+        #   ambientMusicPrototype: PortBalreskaMusic
         - type: Grammar
           attributes:
             proper: true
         - type: StationJobs
-          overflowJobs: []
           availableJobs:
             Captain: [ 10, 10 ]
             Passenger: [ 10, 10 ]

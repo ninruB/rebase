@@ -33,6 +33,10 @@
                 <!-- Misc -->
                 <Label Text="{Loc 'ui-options-misc-label'}" StyleClasses="LabelKeyText"/>
                 <CheckBox Name="FpsCounterCheckBox" Text="{Loc 'ui-options-fps-counter'}" />
+                <!-- WD EDIT START -->
+                <CheckBox Name="FilmGrainCheckBox" Text="{Loc 'ui-options-film-grain'}" />
+                <ui:OptionSlider Name="FilmGrainSlider" Title="{Loc ui-options-film-grain-strength}" />
+                <!-- WD EDIT END -->
             </BoxContainer>
         </ScrollContainer>
         <ui:OptionsTabControlRow Name="Control" Access="Public" />

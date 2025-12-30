@@ -106,6 +106,9 @@ ui-options-fps-counter = Show FPS counter
 ui-options-vp-width = Viewport width:
 ui-options-hud-layout = HUD layout:
 
+ui-options-film-grain = Film Grain Toggle
+ui-options-film-grain-strength = Film Grain Strength
+
 ## Controls menu
 
 ui-options-binds-reset-all = Reset ALL keybinds
