@@ -13,7 +13,6 @@
   id: Crates
   groups:
   - CrateSteel
-  - CratePlastic
   - CrateSecure
 
 - type: paintableGroupCategory

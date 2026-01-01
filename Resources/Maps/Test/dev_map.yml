@@ -9809,15 +9809,6 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: CrateHydroponicsSeedsExotic
-  entities:
-  - uid: 1043
-    components:
-    - type: Transform
-      pos: 35.5,43.5
-      parent: 1
-    - type: Lock
-      locked: False
 - proto: CrateMaterialSteel
   entities:
   - uid: 1913
@@ -11869,33 +11860,6 @@ entities:
       parent: 1
     - type: Lock
       locked: False
-- proto: LockerChemistryFilled
-  entities:
-  - uid: 1134
-    components:
-    - type: Transform
-      pos: 53.375,41.5
-      parent: 1
-    - type: Lock
-      locked: False
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14673
-        moles:
-        - 1.7459903
-        - 6.568249
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
 - proto: LockerChiefEngineerFilledHardsuit
   entities:
   - uid: 1332

@@ -3,31 +3,31 @@
   cost: 2
   defaultStyle: basic
   styles:
-    atmospherics: LockerAtmospherics
+    atmospherics: ClosetSteelBase
     basic: ClosetSteelBase
-    botanist: LockerBotanist
-    brigmedic: LockerBrigmedic
-    captain: LockerCaptain
-    ce: LockerChiefEngineer
-    chemical: LockerChemistry
-    clown: LockerClown
-    cmo: LockerChiefMedicalOfficer
-    doctor: LockerMedical
-    electrical: LockerElectricalSupplies
-    engineer: LockerEngineer
-    evac: LockerEvacRepair
-    hop: LockerHeadOfPersonnel
-    hos: LockerHeadOfSecurity
-    mime: LockerMime
-    medicine: LockerMedicine
-    paramedic: LockerParamedic
-    quartermaster: LockerQuarterMaster
-    rd: LockerResearchDirector
-    representative: LockerRepresentative
-    salvage: LockerSalvageSpecialist
-    scientist: LockerScientist
-    security: LockerSecurity
-    welding: LockerWeldingSupplies
+    botanist: ClosetSteelBase
+    brigmedic: ClosetSteelBase
+    captain: ClosetSteelBase
+    ce: ClosetSteelBase
+    chemical: ClosetSteelBase
+    clown: ClosetSteelBase
+    cmo: ClosetSteelBase
+    doctor: ClosetSteelBase
+    electrical: ClosetSteelBase
+    engineer: ClosetSteelBase
+    evac: ClosetSteelBase
+    hop: ClosetSteelBase
+    hos: ClosetSteelBase
+    mime: ClosetSteelBase
+    medicine: ClosetSteelBase
+    paramedic: ClosetSteelBase
+    quartermaster: ClosetSteelBase
+    rd: ClosetSteelBase
+    representative: ClosetSteelBase
+    salvage: ClosetSteelBase
+    scientist: ClosetSteelBase
+    security: ClosetSteelBase
+    welding: ClosetSteelBase
 
 - type: paintableGroup
   id: Closet

@@ -10,7 +10,6 @@
   id: StandardStation
   parent:
     - BaseStation
-    - BaseStationCargo
     - BaseStationJobsSpawning
     - BaseStationRecords
     - BaseStationAlertLevels

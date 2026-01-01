@@ -73,7 +73,7 @@
 # Weirdly the only webbing with a storage whitelist and item mapper.
 # Might be worth making less common (armory only?) and removing the whitelist to eliminate the inconsistency.
 - type: entity
-  parent: ClothingBeltSecurity
+  parent: ClothingBeltStorageBase
   id: ClothingBeltSecurityWebbing
   name: security carrier
   description: Unique and versatile chest rig, can hold security gear.

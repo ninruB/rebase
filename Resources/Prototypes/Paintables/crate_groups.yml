@@ -4,35 +4,25 @@
   defaultStyle: basic
   styles:
     basic: CrateGenericSteel
-    electrical: CrateElectrical
-    engineering: CrateEngineering
-    radiation: CrateRadiation
-    science: CrateScience
-    surgery: CrateSurgery
-
-- type: paintableGroup
-  id: CratePlastic
-  cost: 2
-  defaultStyle: basic
-  styles:
-    basic: CratePlastic
-    hydroponics: CrateHydroponics
-    medical: CrateMedical
-    oxygen: CrateInternals
+    electrical: CrateGenericSteel #CARMINE TODO:
+    engineering: CrateGenericSteel
+    radiation: CrateGenericSteel
+    science: CrateGenericSteel
+    surgery: CrateGenericSteel
 
 - type: paintableGroup
   id: CrateSecure
   cost: 2
   defaultStyle: basic
   styles:
-    basic: CrateSecure
-    chemistry: CrateChemistrySecure
-    command: CrateCommandSecure
-    engineering: CrateEngineeringSecure
-    hydroponics: CrateHydroSecure
-    medical: CrateMedicalSecure
-    plasma: CratePlasma
-    private: CratePrivateSecure
-    science: CrateScienceSecure
-    secgear: CrateSecgear
-    weapon: CrateWeaponSecure
+    basic: CrateGenericSteel
+    chemistry: CrateGenericSteel
+    command: CrateGenericSteel
+    engineering: CrateGenericSteel
+    hydroponics: CrateGenericSteel
+    medical: CrateGenericSteel
+    plasma: CrateGenericSteel
+    private: CrateGenericSteel
+    science: CrateGenericSteel
+    secgear: CrateGenericSteel
+    weapon: CrateGenericSteel
