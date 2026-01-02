@@ -24,6 +24,8 @@ ui-options-general-cursor = Cursor
 ui-options-general-speech = Speech
 ui-options-general-storage = Storage
 ui-options-general-accessibility = Accessibility
+ui-options-detailed-examine = Show detailed examine text
+ui-options-log-in-chat = Log actions in the chat
 
 ## Audio menu
 

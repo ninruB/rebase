@@ -208,6 +208,7 @@
     - CanPilot
     - FootstepSound
     - DoorBumpOpener
+  - type: ExaminableCharacter # WWDP
 
 - type: entity
   save: false
