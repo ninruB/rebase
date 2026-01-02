@@ -24,9 +24,6 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Rat ]
-          inverted: true
         - !type:ReagentCondition
           reagent: Ammonia
           min: 1
@@ -36,13 +33,6 @@
             Poison: 0.25
       - !type:Vomit
         probability: 0.12
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Rat, Vox ]
-          inverted: true
-        - !type:ReagentCondition
-          reagent: Ammonia
-          min: 0.8
       - !type:PopupMessage
         type: Local
         visualType: Medium
@@ -52,22 +42,3 @@
         - !type:ReagentCondition
           reagent: Ammonia
           min: 0.25
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Rat ]
-        - !type:ReagentCondition
-          reagent: Ammonia
-          min: 1
-        ignoreResistances: true
-        damage:
-          groups:
-            Brute: -2.5
-            Burn: -2.5
-          types:
-            Bloodloss: -5
-      - !type:Oxygenate # ammonia displaces nitrogen in vox blood
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-        factor: -4

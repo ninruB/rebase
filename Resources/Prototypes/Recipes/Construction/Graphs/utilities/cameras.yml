@@ -35,23 +35,3 @@
           steps:
             - tool: Screwing
               doAfter: 2
-
-    # once a camera is constructed, it will
-    # instead just require wire cutting + welding
-    # to immediately deconstruct
-    - node: camera
-      entity: SurveillanceCameraConstructed
-      edges:
-        - to: start
-          conditions:
-            - !type:AllWiresCut {}
-            - !type:WirePanel {}
-          completed:
-            - !type:GivePrototype
-              prototype: SheetSteel1
-              amount: 2
-            - !type:DeleteEntity {}
-          steps:
-            - tool: Welding
-              doAfter: 2
-

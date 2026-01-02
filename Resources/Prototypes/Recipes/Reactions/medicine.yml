@@ -35,16 +35,6 @@
     Cryptobiolin: 3
 
 - type: reaction
-  id: Arithrazine
-  reactants:
-    Hyronalin:
-      amount: 1
-    Hydrogen:
-      amount: 1
-  products:
-    Arithrazine: 2
-
-- type: reaction
   id: Bicaridine
   reactants:
     Inaprovaline:
@@ -251,16 +241,6 @@
     Tricordrazine: 2
 
 - type: reaction
-  id: HeartbreakerToxin
-  reactants:
-    DexalinPlus:
-      amount: 1
-    MindbreakerToxin:
-      amount: 1
-  products:
-    HeartbreakerToxin: 2
-
-- type: reaction
   id: Impedrezene
   minTemp: 370
   reactants:
@@ -277,8 +257,6 @@
   id: Lexorin
   impact: High
   reactants:
-    HeartbreakerToxin:
-      amount: 1
     Plasma:
       amount: 1
     Vestine:
@@ -659,22 +637,6 @@
       amount: 1
   products:
     PotassiumIodide: 2
-
-- type: reaction
-  id: Haloperidol
-  reactants:
-    Aluminium:
-      amount: 1
-    Chlorine:
-      amount: 1
-    Fluorine:
-      amount: 1
-    Oil:
-      amount: 1
-    PotassiumIodide:
-      amount: 1
-  products:
-    Haloperidol: 5
 
 - type: reaction
   id: Warfarin

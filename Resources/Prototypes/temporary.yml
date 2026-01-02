@@ -1,0 +1,654 @@
+- type: entity
+  id: hydroponicsSoil
+  name: soil
+  description: A mix of organic matter and minerals creating a soil to grow your plant in space. Seems to be dry.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.1"
+        density: 190
+        hard: false
+        mask:
+        - FullTileMask
+        layer:
+        - FullTileMask
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Sprite
+    sprite: Structures/Hydroponics/misc.rsi
+    state: soil
+    noRot: true
+  - type: PlantHolder
+    drawWarnings: false
+  - type: SolutionContainerManager
+    solutions:
+      soil:
+        maxVol: 200
+  - type: RefillableSolution
+    solution: soil
+    maxRefill: 50
+  - type: Transform
+    anchored: true
+  - type: Reactive
+    reactions:
+    - reagents: [Water]
+      methods: [Touch, Ingestion, Injection]
+      effects:
+      - !type:AddReagentToSolution
+        reagent: Water
+        solution: soil
+  - type: Appearance
+  - type: PlantHolderVisuals
+
+- type: entity
+  id: ClosetL3
+  parent: ClosetSteelBase
+  name: level 3 biohazard gear closet
+  description: It's a storage unit for level 3 biohazard gear.
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: bio
+    stateDoorOpen: bio_open
+    stateDoorClosed: bio_door
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelMedical
+  name: medical duffel bag
+  description: A large duffel bag for holding extra medical supplies.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Duffels/medical.rsi
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: ReagentContainerBase
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/ingredients.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+  - type: SolutionTransfer
+    # This is potentially badly-handled due to 'drink opening',
+    #  but it lets the flour be tampered with, refilled, etc.
+  - type: DrawableSolution
+    solution: food
+  - type: RefillableSolution
+    solution: food
+  - type: DrainableSolution
+    solution: food
+  - type: Edible
+    edible: Food # usually contains powders like flour or condiments like ketchup
+    solution: food
+    utensil: Spoon
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Spillable
+    solution: food
+  - type: TrashOnSolutionEmpty
+    solution: food
+
+- type: entity
+  abstract: true
+  parent: ReagentContainerBase
+  id: ReagentPacketBase
+  components:
+  - type: Openable
+    sound:
+      collection: packetOpenSounds
+  # packet can be broken open
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: desecration
+      - !type:SpillBehavior
+        solution: food
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  # packet contents can be splashed when open
+  - type: MeleeWeapon
+    soundNoDamage:
+      path: "/Audio/Effects/Fluids/splat.ogg"
+    damage:
+      types:
+        Blunt: 0
+
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseAmmoProvider
+  components:
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: Objects/Storage/boxes.rsi
+
+- type: entity
+  parent: BaseItem
+  id: FloorTileItemBase
+  description: These could work as a pretty decent throwing weapon.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Tiles/tile.rsi
+  - type: Item
+    sprite: Objects/Tiles/tile.rsi
+    size: Normal
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Stack
+    count: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -8
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: GuideHelp
+    guides:
+    - ExpandingRepairingStation
+
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: BaseMaterialDoor
+  name: door
+  description: A door, where will it lead?
+  components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Structures/Doors/MineralDoors/metal_door.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: Door
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.6
+    openTimeOne: 0.6
+    openTimeTwo: 0.2
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    closeSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+  - type: Appearance
+  - type: Airtight
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 6
+    fx: EffectRCDDeconstruct6
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Occluder
+  - type: BlockWeather
+
+- type: entity
+  abstract: true
+  id: ItemHeftyBase
+  components:
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 1
+
+- type: RandomPlantMutationList
+  id: RandomPlantMutations
+  mutations:
+    # disabled until 50 morbillion point lights don't cause the renderer to die
+    #- name: Bioluminescent
+    #  description: mutation-plant-bioluminescent
+    #  baseOdds: 0.036
+    #  appliesToPlant: false
+    #  effect: !type:Glow
+    - name: Sentient
+      description: mutation-plant-sentient
+      baseOdds: 0.0072
+      appliesToProduce: false
+      persists: false
+      effect: !type:MakeSentient # existing effect.
+    - name: Slippery
+      description: mutation-plant-slippery
+      baseOdds: 0.036
+      appliesToPlant: false
+      effect: !type:Slipify
+    - name: ChangeSpecies
+      baseOdds: 0.036
+      appliesToProduce: false
+      effect: !type:PlantMutateSpeciesChange
+      persists: false
+    - name: Unviable
+      baseOdds: 0.109
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: Viable
+    - name: ChangeWaterConsumption
+      baseOdds: 0.018
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: WaterConsumption
+        minValue: 0.3
+        maxValue: 0.9
+        steps: 5
+    - name: ChangeNutrientConsumption
+      baseOdds: 0.018
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: NutrientConsumption
+        minValue: 0.05
+        maxValue: 1.2
+        steps: 5
+    - name: ChangeIdealHeat
+      baseOdds: 0.018
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: IdealHeat
+        minValue: 263
+        maxValue: 323
+        steps: 5
+    - name: ChangeHeatTolerance
+      baseOdds: 0.018
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: HeatTolerance
+        minValue: 2
+        maxValue: 25
+        steps: 5
+    - name: ChangeToxinsTolerance
+      baseOdds: 0.018
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: ToxinsTolerance
+        minValue: 1
+        maxValue: 10
+        steps: 5
+    - name: ChangeLowPressureTolerance
+      baseOdds: 0.018
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: LowPressureTolerance
+        minValue: 60
+        maxValue: 100
+        steps: 5
+    - name: ChangeHighPressureTolerance
+      baseOdds: 0.018
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: HighPressureTolerance
+        minValue: 100
+        maxValue: 140
+        steps: 5
+    - name: ChangePestTolerance
+      baseOdds: 0.018
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: PestTolerance
+        minValue: 0
+        maxValue: 15
+        steps: 5
+    - name: ChangeWeedTolerance
+      baseOdds: 0.018
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: WeedTolerance
+        minValue: 0
+        maxValue: 15
+        steps: 5
+    - name: ChangeEndurance
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: Endurance
+        minValue: 50
+        maxValue: 150
+        steps: 5
+    - name: ChangeYield
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: Yield
+        minValue: 3
+        maxValue: 10
+        steps: 5
+    - name: ChangeLifespan
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: Lifespan
+        minValue: 10
+        maxValue: 80
+        steps: 5
+    - name: ChangeMaturation
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: Maturation
+        minValue: 3
+        maxValue: 8
+        steps: 5
+    - name: ChangeProduction
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: Production
+        minValue: 1
+        maxValue: 10
+        steps: 5
+    - name: ChangePotency
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: Potency
+        minValue: 30
+        maxValue: 100
+        steps: 5
+    - name: ChangeSeedless
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: Seedless
+    - name: Lignification
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: Ligneous
+    - name: Kudzufication
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: TurnIntoKudzu
+    - name: ChangeScreaming
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantChangeStat
+        targetValue: CanScream
+    - name: ChangeChemicals
+      baseOdds: 0.072
+      persists: false
+      effect: !type:PlantMutateChemicals
+    - name: ChangeExudeGasses
+      baseOdds: 0.0145
+      persists: false
+      effect: !type:PlantMutateExudeGases
+    - name: ChangeConsumeGasses
+      baseOdds: 0.0036
+      persists: false
+      effect: !type:PlantMutateConsumeGases
+    - name: ChangeHarvest
+      baseOdds: 0.036
+      persists: false
+      effect: !type:PlantMutateHarvest
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateSecure
+  name: secure crate
+  components:
+    - type: Icon
+      sprite: Structures/Storage/Crates/secure.rsi
+    - type: Sprite
+      sprite: Structures/Storage/Crates/secure.rsi
+      
+- type: entity
+  id: WindoorSecure
+  parent: BaseSecureWindoor
+  name: secure windoor
+  description: It's a sturdy window and a sliding door. Wow!
+  
+- type: entity
+  parent: CrateBaseWeldable
+  id: CrateGenericSteel
+  name: crate
+  components:
+  - type: Icon
+    sprite: Structures/Storage/Crates/generic.rsi
+  - type: Sprite
+    sprite: Structures/Storage/Crates/generic.rsi
+  - type: Reflect
+    reflects:
+    - Energy
+    reflectProb: 0.2
+    spread: 90
+  - type: Paintable
+    group: CrateSteel
+  - type: RadiationBlockingContainer
+    resistance: 2.5
+    
+- type: entity
+  parent: BaseItem
+  id: BaseVendingMachineRestock
+  abstract: true
+  name: vending machine restock box
+  description: A box for restocking vending machines with corporate goodies.
+  components:
+  - type: VendingMachineRestock
+  - type: Sprite
+    sprite: Objects/Specific/Service/vending_machine_restock.rsi
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      path: /Audio/Weapons/genhit2.ogg
+    soundSwing:
+      path: /Audio/Weapons/punchmiss.ogg
+  - type: Item
+    size: Normal
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DumpRestockInventory
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+        
+- type: entity
+  id: BaseXenoArtifact
+  parent: BaseMob # we use this since it can technically get inhabited
+  name: artifact
+  description: A strange artifact from time unknown. Looks like a good time.
+  abstract: true
+  noSpawn: true
+  components:
+  # Visual
+  - type: Appearance
+  - type: InteractionOutline
+  - type: UserInterface #needs to be here for certain effects
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface
+      enum.IntercomUiKey.Key:
+        type: IntercomBoundUserInterface
+  - type: GuideHelp
+    guides:
+    - Xenoarchaeology
+  # gameplay interactions
+  - type: XenoArtifact
+    effectsTable: !type:NestedSelector
+      tableId: XenoArtifactEffectsDefaultTable
+  - type: Damageable
+  - type: Actions
+  - type: Physics
+    bodyType: Dynamic
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 0.25
+    baseSprintSpeed: 0.5
+  - type: UseDelay
+  - type: StealTarget
+    stealGroup: XenoArtifact
+  - type: ContainerContainer
+    containers:
+      node-container: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+  # These components are needed for certain triggers to work.
+  - type: RadiationReceiver
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+      Acidic: [Touch]
+      
+- type: entity
+  name: chemistry bag
+  id: ChemBag
+  parent: BaseStorageItem
+  description: A bag for storing chemistry products, such as pills, pill canisters, bottles, and syringes.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/chem_bag.rsi
+    state: icon
+  - type: Clothing
+    sprite: Objects/Specific/Chemistry/chem_bag.rsi
+    quickEquip: false
+    slots:
+    - belt
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Normal # allow up to 5 large beakers / 10 beakers / 10 pill canisters
+    grid:
+    - 0,0,4,3
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      components:
+        - FitsInDispenser
+        - Pill
+      tags:
+        - Document
+        - PillCanister
+        - Bottle
+        - Syringe
+        - Dropper
+  - type: Dumpable
+  
+- type: reagent
+  id: THC
+  name: reagent-name-thc
+  group: Narcotics
+  desc: reagent-desc-thc
+  flavor: bitter
+  flavorMinimum: 0.05
+  color: "#808080"
+  physicalDesc: reagent-physical-desc-crystalline
+  plantMetabolism:
+  - !type:PlantAdjustNutrition
+    amount: -5
+  - !type:PlantAdjustHealth
+    amount: -1
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        time: 16
+        type: Add

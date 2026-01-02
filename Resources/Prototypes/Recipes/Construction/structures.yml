@@ -134,48 +134,6 @@
   canRotate: false
 
 - type: construction
-  id: ShuttleWindow
-  graph: Window
-  startNode: start
-  targetNode: shuttleWindow
-  category: construction-category-structures
-  canBuildInImpassable: true
-  conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: false
-
-- type: construction
-  id: PlasmaWindowDiagonal
-  name: construction-recipe-plasma-window-diagonal
-  graph: WindowDiagonal
-  startNode: start
-  targetNode: plasmaWindowDiagonal
-  category: construction-category-structures
-  canBuildInImpassable: true
-  conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
-  objectType: Structure
-  placementMode: SnapgridCenter
-
-- type: construction
-  id: ReinforcedPlasmaWindowDiagonal
-  name: construction-recipe-reinforced-plasma-window-diagonal
-  graph: WindowDiagonal
-  startNode: start
-  targetNode: reinforcedPlasmaWindowDiagonal
-  category: construction-category-structures
-  canBuildInImpassable: true
-  conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
-  objectType: Structure
-  placementMode: SnapgridCenter
-
-- type: construction
   id: WindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -434,49 +392,6 @@
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-#lighting
-- type: construction
-  id: LightTubeFixture
-  graph: LightFixture
-  startNode: start
-  targetNode: tubeLight
-  category: construction-category-structures
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: true
-  canBuildInImpassable: false
-  conditions:
-  # Need an *additional* condition here that forces there to be a wall in the opposite direction to the one used for placement.
-  # Also see below. Didn't add it b/c construction ECS work going on. Cheers, - 20kdc
-    - !type:TileNotBlocked
-
-- type: construction
-  id: LightSmallFixture
-  graph: LightFixture
-  startNode: start
-  targetNode: bulbLight
-  category: construction-category-structures
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: true
-  canBuildInImpassable: false
-  conditions:
-  # Same here. - 20kdc
-    - !type:TileNotBlocked
-
-- type: construction
-  id: EmergencyLightFixture
-  graph: LightFixture
-  startNode: start
-  targetNode: emergencyLight
-  category: construction-category-structures
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: true
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked

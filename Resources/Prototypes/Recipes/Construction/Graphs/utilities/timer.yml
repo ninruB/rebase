@@ -157,27 +157,3 @@
         steps:
         - tool: Screwing
           doAfter: 1
-
-    - node: signal
-      entity: SignalTimer
-      edges:
-      - to: signalElectronics
-        steps:
-        - tool: Screwing
-          doAfter: 2
-
-    - node: screen
-      entity: ScreenTimer
-      edges:
-      - to: screenGlass
-        steps:
-        - tool: Screwing
-          doAfter: 2
-
-    - node: brig
-      entity: BrigTimer
-      edges:
-      - to: brigGlass
-        steps:
-        - tool: Screwing
-          doAfter: 2

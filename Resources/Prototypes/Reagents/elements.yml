@@ -62,20 +62,9 @@
       metabolismRate: 0.1
       effects:
       - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Arachnid ]
-          inverted: true
         damage:
           types:
             Poison: 0.1
-    Medicine:
-      effects:
-      - !type:ModifyBloodLevel
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Arachnid ]
-        amount: 0.4
 
 - type: reagent
   id: Fluorine
@@ -148,23 +137,9 @@
   boilingPoint: 2862.0
   meltingPoint: 1538.0
   metabolisms:
-    Poison:
-      metabolismRate: 0.1
-      effects:
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Arachnid ]
-        damage:
-          types:
-            Poison: 0.1
     Medicine:
       effects:
       - !type:ModifyBloodLevel
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Arachnid ]
-          inverted: true
         amount: 0.4
 
 - type: reagent

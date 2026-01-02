@@ -217,8 +217,6 @@
         reagents:
         - ReagentId: UncookedAnimalProteins
           Quantity: 5
-        - ReagentId: GastroToxin
-          Quantity: 4
         - ReagentId: Fat
           Quantity: 4
   - type: Item

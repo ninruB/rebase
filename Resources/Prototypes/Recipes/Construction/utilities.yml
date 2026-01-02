@@ -935,29 +935,3 @@
   canBuildInImpassable: true
   conditions:
   - !type:WallmountCondition {}
-
-# TIMERS
-- type: construction
-  id: SignalTimer
-  graph: Timer
-  startNode: start
-  targetNode: signal
-  category: construction-category-utilities
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: true
-  conditions:
-  - !type:WallmountCondition
-
-- type: construction
-  id: ScreenTimer
-  graph: Timer
-  startNode: start
-  targetNode: screen
-  category: construction-category-utilities
-  objectType: Structure
-  canRotate: false
-  placementMode: SnapgridCenter
-  canBuildInImpassable: true
-  conditions:
-  - !type:WallmountCondition

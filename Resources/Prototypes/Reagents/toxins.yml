@@ -224,7 +224,7 @@
       - !type:PopupMessage
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox ]
+          type: [ Animal ]
           inverted: true
         type: Local
         visualType: MediumCaution
@@ -234,35 +234,22 @@
         probability: 0.1
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant ]
+          type: [ Animal ]
           inverted: true
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant ]
+          type: [ Animal ]
           inverted: true
         damage:
           types:
             Poison: 1
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Plant ]
-        damage:
-          types:
-            Poison: .25
       - !type:AdjustReagent
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Animal ]
         reagent: Protein
         amount: 0.5
-      - !type:AdjustReagent
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-        reagent: Protein
-        amount: 0.25
 
 - type: reagent
   id: Hemorrhinol

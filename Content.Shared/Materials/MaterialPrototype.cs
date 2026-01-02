@@ -54,7 +54,7 @@ namespace Content.Shared.Materials
         /// <summary>
         /// The price per cm3.
         /// </summary>
-        [DataField(required: true)]
+        [DataField]
         public double Price = 0;
     }
 }

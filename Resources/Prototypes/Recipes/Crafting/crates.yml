@@ -2,7 +2,7 @@
   id: CrateGenericSteel
   graph: CrateGenericSteel
   startNode: start
-  targetNode: crategenericsteel
+  targetNode: CrateGenericSteel
   category: construction-category-storage
   objectType: Structure
 

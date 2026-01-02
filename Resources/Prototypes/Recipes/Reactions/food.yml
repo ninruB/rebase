@@ -206,16 +206,6 @@
 # Condiments
 
 - type: reaction
-  id: CookingKetchup
-  reactants:
-    JuiceTomato:
-      amount: 2
-    Sugar:
-      amount: 1
-  products:
-    Ketchup: 3
-
-- type: reaction
   id: CookingMayoVinegar
   reactants:
     Vinegar:
@@ -273,30 +263,6 @@
     BbqSauce: 3
 
 - type: reaction
-  id: CookingHotsauce
-  reactants:
-    JuiceTomato:
-      amount: 1
-    TableSalt:
-      amount: 1
-    CapsaicinOil:
-      amount: 1
-  products:
-    Hotsauce: 3
-
-- type: reaction
-  id: CookingColdsauce
-  reactants:
-    JuiceTomato:
-      amount: 1
-    TableSalt:
-      amount: 1
-    FrostOil:
-      amount: 1
-  products:
-    Coldsauce: 3
-
-- type: reaction
   id: CookingVinegar
   reactants:
     Ethanol:
@@ -329,18 +295,6 @@
     Vinaigrette: 3
 
 - type: reaction
-  id: BananaBreakdown
-  source: true
-  requiredMixerCategories:
-  - Centrifuge
-  reactants:
-    JuiceBanana:
-      amount: 10
-  products:
-    Sugar: 5
-    Potassium: 5
-
-- type: reaction
   id: OilBreakdown
   requiredMixerCategories:
   - Centrifuge
@@ -363,19 +317,6 @@
 #    Carbon: 1
 #    Oxygen: 1
 #    Hydrogen: 2
-
-- type: reaction
-  id: AllicinBreakdown
-  source: true
-  requiredMixerCategories:
-  - Centrifuge
-  reactants:
-    Allicin:
-      amount: 4
-  products:
-    Sulfur: 2
-    Carbon: 1
-    Water: 1
 
 - type: reaction
   id: NutrimentBreakdown

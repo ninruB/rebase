@@ -266,10 +266,6 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
-    Allicin:
-      Min: 1
-      Max: 8
-      PotencyDivisor: 25
 
 - type: seed
   id: apple
@@ -357,10 +353,6 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
-    Allicin:
-      Min: 1
-      Max: 4
-      PotencyDivisor: 25
 
 - type: seed
   id: chanterelle
@@ -407,10 +399,6 @@
   idealLight: 9
   idealHeat: 298
   chemicals:
-    CapsaicinOil:
-      Min: 1
-      Max: 10
-      PotencyDivisor: 10
     Nutriment:
       Min: 1
       Max: 4

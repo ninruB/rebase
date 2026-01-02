@@ -50,14 +50,6 @@
         effectProto: StatusEffectPainNumbness
         time: 2
       # Interactions
-      - !type:ModifyStatusEffect
-        conditions:
-        - !type:ReagentCondition
-          reagent: Haloperidol
-          max: 0.01
-        effectProto: StatusEffectDrowsiness
-        time: 10
-        type: Remove
     Medicine:
       effects:
       # Side effects
@@ -109,14 +101,6 @@
             Poison: 2
             Asphyxiation: 2
       # Interactions
-      - !type:ModifyStatusEffect
-        conditions:
-        - !type:ReagentCondition
-          reagent: Haloperidol
-          max: 0.01
-        effectProto: StatusEffectDrowsiness
-        time: 10
-        type: Remove
     Medicine:
       effects:
       # Side effects

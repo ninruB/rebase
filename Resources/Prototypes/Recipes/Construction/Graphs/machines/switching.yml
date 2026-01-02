@@ -44,21 +44,6 @@
               doAfter: 2.0
             - material: Cable
               amount: 1
-    - node: LightSwitchNode
-      entity: ApcNetSwitch
-      edges:
-        - to: start
-          steps:
-            - tool: Screwing
-              doAfter: 2.0
-          completed:
-            - !type:GivePrototype
-              prototype: SheetSteel1
-              amount: 1
-            - !type:GivePrototype
-              prototype: CableApcStack1
-              amount: 1
-            - !type:DeleteEntity {}
 
 - type: constructionGraph
   id: SignalSwitchGraph
@@ -131,21 +116,6 @@
               doAfter: 2.0
             - material: Cable
               amount: 1
-    - node: LightSwitchDirectionalNode
-      entity: ApcNetSwitchDirectional
-      edges:
-        - to: start
-          steps:
-            - tool: Screwing
-              doAfter: 2.0
-          completed:
-            - !type:GivePrototype
-              prototype: SheetSteel1
-              amount: 1
-            - !type:GivePrototype
-              prototype: CableApcStack1
-              amount: 1
-            - !type:DeleteEntity {}
 
 - type: constructionGraph
   id: SignalSwitchDirectionalGraph

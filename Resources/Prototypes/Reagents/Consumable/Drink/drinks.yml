@@ -104,13 +104,3 @@
       effects:
       - !type:SatiateThirst
         factor: 4
-    Gas:
-      effects:
-      - !type:HealthChange
-        ignoreResistances: true
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-        damage:
-          types:
-            Heat: 3

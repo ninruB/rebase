@@ -1,20 +1,4 @@
 - type: construction
-  id: Shiv
-  graph: Shiv
-  startNode: start
-  targetNode: icon
-  category: construction-category-weapons
-  objectType: Item
-
-- type: construction
-  id: Spear
-  graph: Spear
-  startNode: start
-  targetNode: spear
-  category: construction-category-weapons
-  objectType: Item
-
-- type: construction
   id: Bola
   graph: Bola
   startNode: start

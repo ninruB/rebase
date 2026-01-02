@@ -4,14 +4,14 @@
   graph:
     - node: start
       edges:
-        - to: crategenericsteel
+        - to: CrateGenericSteel
           steps:
             - material: Steel
               amount: 5
               doAfter: 5
 
 
-    - node: crategenericsteel
+    - node: CrateGenericSteel
       entity: CrateGenericSteel
       edges:
         - to: start

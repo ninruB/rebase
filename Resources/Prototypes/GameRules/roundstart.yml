@@ -28,6 +28,7 @@
   components:
   - type: MaxTimeRestartRule
     roundMaxTime: 300
+    roundEndDelay: 10
 
 - type: entity
   id: Sandbox

@@ -99,11 +99,6 @@
     heldPrefix: produce
   - type: Produce
     seedId: banana
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceBanana
-        Quantity: 10
   - type: Tag
     tags:
     - Fruit
@@ -155,13 +150,6 @@
     - Ruminant
     - WhitelistChameleon
     - HamsterWearable
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 4
-        reagents:
-        - ReagentId: PulpedBananaPeel
-          Quantity: 4
   - type: Extractable
     grindableSolutionName: food
   - type: SpaceGarbage
@@ -198,11 +186,6 @@
     heldPrefix: produce
   - type: Produce
     seedId: potato
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuicePotato
-        Quantity: 10
   - type: Tag
     tags:
     - Potato
@@ -240,10 +223,6 @@
     seedId: tomato
   - type: Extractable
     grindableSolutionName: food
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceTomato
-        Quantity: 10
   - type: Damageable
     damageContainer: Biological
   - type: DamageOnHighSpeedImpact
@@ -291,8 +270,6 @@
         - ReagentId: Nutriment
           Quantity: 10
         - ReagentId: Vitamin
-          Quantity: 4
-        - ReagentId: Allicin
           Quantity: 4
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/onion.rsi
@@ -370,8 +347,6 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 2
-        - ReagentId: Allicin
-          Quantity: 1
         - ReagentId: Vitamin
           Quantity: 1
   - type: Tag
@@ -399,8 +374,6 @@
         reagents:
           - ReagentId: Nutriment
             Quantity: 4
-          - ReagentId: CapsaicinOil
-            Quantity: 10
           - ReagentId: Vitamin
             Quantity: 4
   - type: Sprite

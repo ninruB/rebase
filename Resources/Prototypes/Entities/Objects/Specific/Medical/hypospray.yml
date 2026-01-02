@@ -274,10 +274,8 @@
       pen:
         maxVol: 20
         reagents:
-        - ReagentId: Arithrazine
-          Quantity: 15
-        - ReagentId: Bicaridine
-          Quantity: 5
+        - ReagentId: Hyronalin
+          Quantity: 20
 
 - type: entity
   parent: ChemicalMedipen

@@ -165,20 +165,10 @@
   tileReactions:
   - !type:FlammableTileReaction {}
   metabolisms:
-    Food:
-      effects:
-      - !type:SatiateThirst
-        factor: 1
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Vox]
     Poison:
       effects:
       - !type:HealthChange
         conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Vox]
-          inverted: true
         damage:
           types:
             Poison: 1

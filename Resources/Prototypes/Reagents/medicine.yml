@@ -240,21 +240,10 @@
             Asphyxiation: 1
             Poison: 1
       - !type:AdjustReagent
-        reagent: HeartbreakerToxin
-        amount: -2
-      - !type:AdjustReagent
-        conditions:
-        - !type:ReagentCondition
-          reagent: HeartbreakerToxin
-          min: 1
         reagent: Epinephrine
         amount: -1
       - !type:AdjustReagent
         probability: 0.1
-        conditions:
-        - !type:ReagentCondition
-          reagent: HeartbreakerToxin
-          min: 1
         reagent: Histamine
         amount: 4
       - !type:ModifyStatusEffect
@@ -408,9 +397,6 @@
         visualType: Medium
         messages: [ "leporazine-effect-temperature-adjusting" ]
         probability: 0.2
-      - !type:AdjustReagent
-        reagent: Fresium
-        amount: -5
 
 - type: reagent
   id: Barozine
@@ -489,14 +475,6 @@
         damage:
           types:
             Radiation: 0.2
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Arithrazine
-          min: 1
-        damage:
-          types:
-            Caustic: 0.3
 
 - type: reagent
   id: Saline

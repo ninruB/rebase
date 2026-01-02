@@ -137,18 +137,6 @@
             - tool: Screwing
               doAfter: 1
 
-
-    - node: ShuttersWindow
-      entity: ShuttersWindowOpen
-      edges:
-        - to: ShuttersWindowFrame
-          conditions:
-            - !type:EntityAnchored
-              anchored: true
-          steps:
-            - tool: Anchoring
-              doAfter: 1
-
     - node: ShuttersRadiationFrame
       edges:
         - to: ShuttersRadiation

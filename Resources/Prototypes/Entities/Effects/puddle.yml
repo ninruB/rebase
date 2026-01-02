@@ -49,7 +49,7 @@
       puddle:
         maxVol: 1000
         reagents:
-        - ReagentId: JuiceTomato
+        - ReagentId: Water
           Quantity: 10
 
 - type: entity
